@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import logo from "../assets/logo.svg";
+import logo from "../assets/Logo.svg";
 import { ChevronDown, ChevronRight, Menu, X } from "lucide-react";
 
 import { Link } from "react-router-dom";
