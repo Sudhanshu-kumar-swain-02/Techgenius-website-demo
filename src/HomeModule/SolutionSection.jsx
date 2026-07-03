@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import logo from "../assets/logo.svg"
+import logo from "../assets/Logo.svg";
 
 /* ── Data ── */
 const services = [
@@ -249,13 +249,19 @@ function Modal({ data, onClose }) {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
           <div className="absolute bottom-4 left-6 text-white">
-            <div className="text-xs font-semibold tracking-widest opacity-75 mb-1">{data.tag}</div>
+            <div className="text-xs font-semibold tracking-widest opacity-75 mb-1">
+              {data.tag}
+            </div>
             <div className="text-xl font-light">{data.heading}</div>
           </div>
           <button
             onClick={onClose}
             className="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full text-white text-lg transition-all duration-200 hover:bg-white/30 hover:scale-110"
-            style={{ background: "rgba(255,255,255,.15)", backdropFilter: "blur(4px)", border: "none" }}
+            style={{
+              background: "rgba(255,255,255,.15)",
+              backdropFilter: "blur(4px)",
+              border: "none",
+            }}
           >
             ×
           </button>
@@ -266,7 +272,10 @@ function Modal({ data, onClose }) {
           <p className="text-slate-500 leading-relaxed text-sm mb-5 min-h-[52px]">
             <Typewriter text={data.popup.intro} />
           </p>
-          <div className="text-xs font-semibold tracking-widest mb-3" style={{ color: data.accent }}>
+          <div
+            className="text-xs font-semibold tracking-widest mb-3"
+            style={{ color: data.accent }}
+          >
             {data.popup.listTitle.toUpperCase()}
           </div>
           <ul className="m-0 p-0 list-none">
@@ -274,7 +283,12 @@ function Modal({ data, onClose }) {
               <li
                 key={i}
                 className="flex items-start gap-2.5 py-2 text-sm text-slate-700"
-                style={{ borderBottom: i < data.popup.items.length - 1 ? "1px solid #F1F5F9" : "none" }}
+                style={{
+                  borderBottom:
+                    i < data.popup.items.length - 1
+                      ? "1px solid #F1F5F9"
+                      : "none",
+                }}
               >
                 <span
                   className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0"
@@ -293,8 +307,12 @@ function Modal({ data, onClose }) {
                 color: data.accent,
                 minWidth: 140,
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.background = data.accentLight)}
-              onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.background = data.accentLight)
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.background = "transparent")
+              }
             >
               Learn more
             </button>
@@ -345,7 +363,9 @@ function Card({ s, index, onClick }) {
           style={{
             transition: "transform .6s ease, filter .4s ease",
             transform: hovered ? "scale(1.08)" : "scale(1)",
-            filter: hovered ? "brightness(1.05) saturate(1.15)" : "brightness(1) saturate(1)",
+            filter: hovered
+              ? "brightness(1.05) saturate(1.15)"
+              : "brightness(1) saturate(1)",
           }}
         />
         {/* gradient overlay */}
@@ -381,8 +401,12 @@ function Card({ s, index, onClick }) {
 
       {/* Body */}
       <div className="p-5">
-        <h3 className="m-0 mb-2 text-base font-medium text-slate-900">{s.heading}</h3>
-        <p className="m-0 text-xs leading-relaxed text-slate-500">{s.summary}</p>
+        <h3 className="m-0 mb-2 text-base font-medium text-slate-900">
+          {s.heading}
+        </h3>
+        <p className="m-0 text-xs leading-relaxed text-slate-500">
+          {s.summary}
+        </p>
         <div
           className="mt-4 flex items-center gap-1.5 text-sm font-medium transition-all duration-200"
           style={{ color: s.accent }}
@@ -436,9 +460,16 @@ function Nav() {
             TG
           </div>
           <div className="min-w-0 truncate">
-            <span className="text-slate-900 font-medium text-sm tracking-tight">Tech Genius</span>
-            <span className="text-blue-600 font-medium text-sm tracking-tight"> Balaji</span>
-            <span className="text-slate-400 text-xs ml-1 font-light">Solutions</span>
+            <span className="text-slate-900 font-medium text-sm tracking-tight">
+              Tech Genius
+            </span>
+            <span className="text-blue-600 font-medium text-sm tracking-tight">
+              {" "}
+              Balaji
+            </span>
+            <span className="text-slate-400 text-xs ml-1 font-light">
+              Solutions
+            </span>
           </div>
         </div>
         <div className="hidden md:flex items-center gap-6 flex-wrap">
@@ -474,7 +505,8 @@ export default function SolutionSection() {
   return (
     <div
       style={{
-        fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        fontFamily:
+          "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
         background: "#FAFBFF",
         minHeight: "100vh",
       }}
@@ -602,8 +634,6 @@ export default function SolutionSection() {
         }
       `}</style>
 
-  
-
       {/* ─── COMPANY NAME HEADING ─── */}
       <div
         className="pt-28 pb-0 text-center px-4"
@@ -613,25 +643,19 @@ export default function SolutionSection() {
           Welcome to
         </p>
         <h1
-  className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight break-words"
-  style={{ letterSpacing: "-0.025em", lineHeight: 1.1 }}
->
-  <span style={{ color: "#2563EB" }}>
-    <WaveHeading text="TechGenius" />
-  </span>
-
-  {" "}
-
-  <span style={{ color: "#F97316" }}>
-    <WaveHeading text="Balaji" />
-  </span>
-
-  {" "}
-
-  <span style={{ color: "#2563EB" }}>
-    <WaveHeading text="Solutions" />
-  </span>
-</h1>
+          className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight break-words"
+          style={{ letterSpacing: "-0.025em", lineHeight: 1.1 }}
+        >
+          <span style={{ color: "#2563EB" }}>
+            <WaveHeading text="TechGenius" />
+          </span>{" "}
+          <span style={{ color: "#F97316" }}>
+            <WaveHeading text="Balaji" />
+          </span>{" "}
+          <span style={{ color: "#2563EB" }}>
+            <WaveHeading text="Solutions" />
+          </span>
+        </h1>
         <div className="flex items-center justify-center gap-3 mt-4 flex-wrap">
           <div className="h-px w-16 bg-gradient-to-r from-transparent to-blue-300" />
           <p className="text-xs text-slate-400 tracking-widest uppercase font-light">
@@ -642,17 +666,16 @@ export default function SolutionSection() {
       </div>
 
       {/* ─── HERO ─── */}
-      <header
-        className="container-fluid pt-0 pb- grid gap-10 lg:gap-14 items-center grid-cols-1 lg:grid-cols-2"
-      >
-        <div style={{ animation: "fadeUp .7s .1s ease both" }} className="min-w-0">
+      <header className="container-fluid pt-0 pb- grid gap-10 lg:gap-14 items-center grid-cols-1 lg:grid-cols-2">
+        <div
+          style={{ animation: "fadeUp .7s .1s ease both" }}
+          className="min-w-0"
+        >
           <div
             className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs text-blue-600 font-medium mb-6"
             style={{ background: "#EFF6FF", border: "1px solid #BFDBFE" }}
           >
-            <span
-              className="relative w-1.5 h-1.5 rounded-full bg-blue-600 flex-shrink-0"
-            >
+            <span className="relative w-1.5 h-1.5 rounded-full bg-blue-600 flex-shrink-0">
               <span
                 className="absolute inset-0 rounded-full bg-blue-400"
                 style={{ animation: "pulseRing 1.5s ease-out infinite" }}
@@ -663,7 +686,11 @@ export default function SolutionSection() {
 
           <h2
             className="m-0 mb-4 font-light text-slate-900 break-words"
-            style={{ fontSize: "clamp(26px, 4vw, 42px)", lineHeight: 1.15, letterSpacing: "-0.02em" }}
+            style={{
+              fontSize: "clamp(26px, 4vw, 42px)",
+              lineHeight: 1.15,
+              letterSpacing: "-0.02em",
+            }}
           >
             Built to help your
             <br />
@@ -699,14 +726,16 @@ export default function SolutionSection() {
           <div
             className="absolute inset-0"
             style={{
-              background: "linear-gradient(135deg, rgba(37,99,235,.2) 0%, transparent 60%)",
+              background:
+                "linear-gradient(135deg, rgba(37,99,235,.2) 0%, transparent 60%)",
             }}
           />
           {/* Shine sweep on hover */}
           <div
             className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"
             style={{
-              background: "linear-gradient(120deg, transparent 35%, rgba(255,255,255,.1) 50%, transparent 65%)",
+              background:
+                "linear-gradient(120deg, transparent 35%, rgba(255,255,255,.1) 50%, transparent 65%)",
             }}
           />
           {/* Floating badge */}
@@ -723,7 +752,9 @@ export default function SolutionSection() {
               🚀
             </div>
             <div className="min-w-0">
-              <div className="text-xs font-semibold text-slate-900">2,400+ projects</div>
+              <div className="text-xs font-semibold text-slate-900">
+                2,400+ projects
+              </div>
               <div className="text-xs text-slate-500">delivered globally</div>
             </div>
           </div>
@@ -737,7 +768,10 @@ export default function SolutionSection() {
             <div
               key={i}
               className="text-center px-3 sm:px-5 min-w-0"
-              style={{ borderRight: i < STATS.length - 1 ? "1px solid #E2E8F0" : "none" }}
+              style={{
+                borderRight:
+                  i < STATS.length - 1 ? "1px solid #E2E8F0" : "none",
+              }}
             >
               <div
                 className="text-2xl sm:text-3xl font-light mb-1"
@@ -765,7 +799,10 @@ export default function SolutionSection() {
             </div>
             <h2
               className="m-0 font-light text-slate-900"
-              style={{ fontSize: "clamp(22px, 3.5vw, 30px)", letterSpacing: "-0.02em" }}
+              style={{
+                fontSize: "clamp(22px, 3.5vw, 30px)",
+                letterSpacing: "-0.02em",
+              }}
             >
               Everything your organisation
               <br />
@@ -789,7 +826,8 @@ export default function SolutionSection() {
       <div
         className="py-16 sm:py-20 text-center px-4"
         style={{
-          background: "linear-gradient(135deg, #0F172A 0%, #1E293B 60%, #0F172A 100%)",
+          background:
+            "linear-gradient(135deg, #0F172A 0%, #1E293B 60%, #0F172A 100%)",
         }}
       >
         <div className="text-xs font-semibold tracking-[.14em] text-blue-400 mb-4">
@@ -797,7 +835,10 @@ export default function SolutionSection() {
         </div>
         <h2
           className="m-0 mb-4 font-light text-white break-words"
-          style={{ fontSize: "clamp(24px, 4.5vw, 34px)", letterSpacing: "-0.02em" }}
+          style={{
+            fontSize: "clamp(24px, 4.5vw, 34px)",
+            letterSpacing: "-0.02em",
+          }}
         >
           Let's build something that lasts.
         </h2>
@@ -807,27 +848,26 @@ export default function SolutionSection() {
         <button className="btn-cta">Schedule a free consultation →</button>
 
         {/* Bottom branding */}
-        
-        <div className="mt-16 flex items-center justify-center gap-3 flex-wrap px-4">
-  <img
-    src={logo}
-    alt="Tech Genius Balaji Solutions"
-    className="w-9 h-9 object-contain flex-shrink-0"
-  />
 
-  <span className="text-sm font-black tracking-[0.2em] break-words">
-    <span className="text-blue-300">Techgenius</span>{" "}
-    <span className="text-orange-300">Balaji</span>{" "}
-    <span className="text-blue-300">Solutions</span>
-  </span>
-</div>
+        <div className="mt-16 flex items-center justify-center gap-3 flex-wrap px-4">
+          <img
+            src={logo}
+            alt="Tech Genius Balaji Solutions"
+            className="w-9 h-9 object-contain flex-shrink-0"
+          />
+
+          <span className="text-sm font-black tracking-[0.2em] break-words">
+            <span className="text-blue-300">Techgenius</span>{" "}
+            <span className="text-orange-300">Balaji</span>{" "}
+            <span className="text-blue-300">Solutions</span>
+          </span>
+        </div>
       </div>
 
       {/* ─── MODAL ─── */}
       {active && <Modal data={active} onClose={() => setActive(null)} />}
 
-        {/* LMS views */}
-        
+      {/* LMS views */}
     </div>
   );
 }

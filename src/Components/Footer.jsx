@@ -9,7 +9,7 @@ import {
   FaGlobe,
   FaArrowRight,
 } from "react-icons/fa";
-import logo from "../assets/logo.svg"
+import logo from "../assets/Logo.svg";
 
 const Footer = () => {
   return (
@@ -29,30 +29,29 @@ const Footer = () => {
           paddingRight: "clamp(20px,4vw,96px)",
         }}
       >
-
         {/* MAIN FOOTER */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* BRAND */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3">
-             <div className="relative w-16 h-16 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 flex items-center justify-center overflow-hidden shadow-lg">
-    <img
-      src={logo}
-      alt="TechGenius Logo"
-      className="w-12 h-12 object-contain transition-transform duration-500 group-hover:scale-110"
-    />
-  </div>
+              <div className="relative w-16 h-16 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 flex items-center justify-center overflow-hidden shadow-lg">
+                <img
+                  src={logo}
+                  alt="TechGenius Logo"
+                  className="w-12 h-12 object-contain transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
 
-            <div>
-  <h2 className="text-2xl font-black tracking-tight">
-    <span className="text-blue-400">TechGenius</span>{" "}
-    <span className="text-orange-400">Balaji</span>
-  </h2>
+              <div>
+                <h2 className="text-2xl font-black tracking-tight">
+                  <span className="text-blue-400">TechGenius</span>{" "}
+                  <span className="text-orange-400">Balaji</span>
+                </h2>
 
-  <span className="text-blue-300 text-sm font-semibold tracking-wide">
-    Solutions
-  </span>
-</div>
+                <span className="text-blue-300 text-sm font-semibold tracking-wide">
+                  Solutions
+                </span>
+              </div>
             </div>
 
             <p className="mt-6 text-gray-400 leading-relaxed max-w-md">

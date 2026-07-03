@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import logo from "../assets/logo.svg"; // Update path
+import logo from "../assets/Logo.svg"; // Update path
 import bgImage from "../assets/bg_black.png"; // Update path
 
 const title = "Ready to Transform Learning ?";
@@ -117,7 +117,6 @@ const ViewsPrice = () => {
         style={{ maxWidth: "min(1200px, 94vw)" }}
       >
         <div className="rounded-[32px] border border-blue-100 bg-white/70 backdrop-blur-2xl p-6 sm:p-10 md:p-16 text-center shadow-[0_0_80px_rgba(59,130,246,0.12)]">
-          
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -169,15 +168,9 @@ const ViewsPrice = () => {
           >
             Unlock smarter learning experiences, Join 500+ organisations already
             growing with{" "}
-            <span className="font-semibold text-blue-600">
-              TechGenius
-            </span>{" "}
-            <span className="font-semibold text-orange-500">
-              Balaji
-            </span>{" "}
-            <span className="font-semibold text-blue-600">
-              Solutions
-            </span>
+            <span className="font-semibold text-blue-600">TechGenius</span>{" "}
+            <span className="font-semibold text-orange-500">Balaji</span>{" "}
+            <span className="font-semibold text-blue-600">Solutions</span>
           </motion.p>
 
           {/* CTA Buttons */}
@@ -188,9 +181,7 @@ const ViewsPrice = () => {
             className="mt-12 flex flex-col sm:flex-row justify-center gap-4"
           >
             <button className="group relative overflow-hidden rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 px-8 py-4 text-white font-semibold transition-all duration-300 hover:scale-105">
-              <span className="relative z-10">
-                View pricing plan →
-              </span>
+              <span className="relative z-10">View pricing plan →</span>
 
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
             </button>
