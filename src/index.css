@@ -1,0 +1,52 @@
+@import "tailwindcss";
+.logo-slider {
+
+  display: flex;
+
+  width: max-content;
+
+  animation: scroll 35s linear infinite;
+
+}
+
+.logo-slider:hover {
+
+  animation-play-state: paused;
+
+}
+
+@keyframes scroll {
+
+  from {
+
+    transform: translateX(0);
+
+  }
+
+  to {
+
+    transform: translateX(-50%);
+
+  }
+
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* for hover style */
+
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 35s linear infinite;
+}
+/* all font style */
