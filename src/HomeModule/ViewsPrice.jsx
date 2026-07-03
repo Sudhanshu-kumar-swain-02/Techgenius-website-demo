@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import logo from "../assets/Logo.svg"; // Update path
+import Logo from "../assets/Logo.svg"; // Update path
 import bgImage from "../assets/bg_black.png"; // Update path
 
 const title = "Ready to Transform Learning ?";
@@ -125,7 +125,7 @@ const ViewsPrice = () => {
             className="flex justify-center mb-8"
           >
             <img
-              src={logo}
+              src={Logo}
               alt="TechGenius Balaji Solutions"
               className="h-14 sm:h-20 md:h-24 w-auto object-contain drop-shadow-xl"
             />

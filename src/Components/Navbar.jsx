@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import logo from "../assets/Logo.svg";
+import Logo from "../assets/Logo.svg";
 import { ChevronDown, ChevronRight, Menu, X } from "lucide-react";
 
 import { Link } from "react-router-dom";
@@ -110,13 +110,13 @@ export default function Navbar() {
           bg-transparent
         `}
       >
-        {/* LOGO */}
+        {/* Logo */}
         <motion.div whileHover={{ scale: 1.03 }}>
           <Link to="/" className="flex items-center gap-4">
             <div className="w-20 h-20 rounded-full border-4 border-white overflow-hidden flex items-center justify-center">
               <img
-                src={logo}
-                alt="logo"
+                src={Logo}
+                alt="Logo"
                 className="w-full h-full object-cover"
               />
             </div>

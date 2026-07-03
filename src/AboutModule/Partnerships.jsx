@@ -2,63 +2,63 @@ export default function Partnerships() {
   const companies = [
     {
       name: "Microsoft",
-      logo: "https://cdn.simpleicons.org/microsoft/1E3A8A",
+      Logo: "https://cdn.simpleicons.org/microsoft/1E3A8A",
     },
     {
       name: "Oracle",
-      logo: "https://cdn.simpleicons.org/oracle/1E3A8A",
+      Logo: "https://cdn.simpleicons.org/oracle/1E3A8A",
     },
     {
       name: "SAP",
-      logo: "https://cdn.simpleicons.org/sap/1E3A8A",
+      Logo: "https://cdn.simpleicons.org/sap/1E3A8A",
     },
     {
       name: "Salesforce",
-      logo: "https://cdn.simpleicons.org/salesforce/1E3A8A",
+      Logo: "https://cdn.simpleicons.org/salesforce/1E3A8A",
     },
     {
       name: "ServiceNow",
-      logo: "https://cdn.simpleicons.org/servicenow/1E3A8A",
+      Logo: "https://cdn.simpleicons.org/servicenow/1E3A8A",
     },
     {
       name: "Snowflake",
-      logo: "https://cdn.simpleicons.org/snowflake/1E3A8A",
+      Logo: "https://cdn.simpleicons.org/snowflake/1E3A8A",
     },
     {
       name: "AWS",
-      logo: "https://cdn.simpleicons.org/amazonwebservices/1E3A8A",
+      Logo: "https://cdn.simpleicons.org/amazonwebservices/1E3A8A",
     },
     {
       name: "Google Cloud",
-      logo: "https://cdn.simpleicons.org/googlecloud/1E3A8A",
+      Logo: "https://cdn.simpleicons.org/googlecloud/1E3A8A",
     },
     {
       name: "IBM",
-      logo: "https://cdn.simpleicons.org/ibm/1E3A8A",
+      Logo: "https://cdn.simpleicons.org/ibm/1E3A8A",
     },
     {
       name: "Cisco",
-      logo: "https://cdn.simpleicons.org/cisco/1E3A8A",
+      Logo: "https://cdn.simpleicons.org/cisco/1E3A8A",
     },
     {
       name: "Adobe",
-      logo: "https://cdn.simpleicons.org/adobe/1E3A8A",
+      Logo: "https://cdn.simpleicons.org/adobe/1E3A8A",
     },
     {
       name: "Dell",
-      logo: "https://cdn.simpleicons.org/dell/1E3A8A",
+      Logo: "https://cdn.simpleicons.org/dell/1E3A8A",
     },
     {
       name: "VMware",
-      logo: "https://cdn.simpleicons.org/vmware/1E3A8A",
+      Logo: "https://cdn.simpleicons.org/vmware/1E3A8A",
     },
     {
       name: "Intel",
-      logo: "https://cdn.simpleicons.org/intel/1E3A8A",
+      Logo: "https://cdn.simpleicons.org/intel/1E3A8A",
     },
     {
       name: "Red Hat",
-      logo: "https://cdn.simpleicons.org/redhat/1E3A8A",
+      Logo: "https://cdn.simpleicons.org/redhat/1E3A8A",
     },
   ];
 
@@ -74,8 +74,8 @@ export default function Partnerships() {
 
             <p className="text-[#0b2d89] text-lg max-w-2xl leading-relaxed">
               From enterprise platforms to industry-specific technology
-              collaborations, we work with the world's best to deliver
-              outcomes our clients can count on.
+              collaborations, we work with the world's best to deliver outcomes
+              our clients can count on.
             </p>
           </div>
 
@@ -96,7 +96,7 @@ export default function Partnerships() {
                 className="flex items-center justify-center min-w-[180px] opacity-80 hover:opacity-100 transition duration-300"
               >
                 <img
-                  src={company.logo}
+                  src={company.Logo}
                   alt={company.name}
                   className="h-12 md:h-14 w-auto object-contain hover:scale-110 transition duration-500"
                 />

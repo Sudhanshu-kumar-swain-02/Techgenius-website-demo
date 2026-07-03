@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import logo from "../assets/Logo.svg";
+import Logo from "../assets/Logo.svg";
 
 /* ── Data ── */
 const services = [
@@ -851,7 +851,7 @@ export default function SolutionSection() {
 
         <div className="mt-16 flex items-center justify-center gap-3 flex-wrap px-4">
           <img
-            src={logo}
+            src={Logo}
             alt="Tech Genius Balaji Solutions"
             className="w-9 h-9 object-contain flex-shrink-0"
           />

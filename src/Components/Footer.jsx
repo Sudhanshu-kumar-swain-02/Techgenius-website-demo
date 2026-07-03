@@ -9,7 +9,7 @@ import {
   FaGlobe,
   FaArrowRight,
 } from "react-icons/fa";
-import logo from "../assets/Logo.svg";
+import Logo from "../assets/Logo.svg";
 
 const Footer = () => {
   return (
@@ -36,7 +36,7 @@ const Footer = () => {
             <div className="flex items-center gap-3">
               <div className="relative w-16 h-16 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 flex items-center justify-center overflow-hidden shadow-lg">
                 <img
-                  src={logo}
+                  src={Logo}
                   alt="TechGenius Logo"
                   className="w-12 h-12 object-contain transition-transform duration-500 group-hover:scale-110"
                 />

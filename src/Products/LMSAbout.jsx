@@ -288,9 +288,9 @@ const features = [
 const clients = [
   "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_Logo.svg",
   "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_Logo.svg",
-  "https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg",
+  "https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_Logo_%282012%29.svg",
   "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_Logo.svg",
-  "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
+  "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_Logo_black.svg",
 ];
 
 const testimonials = [
@@ -541,7 +541,7 @@ export default function LMSAbout() {
         </div>
       </section>
 
-      {/* ── CLIENT LOGOS ── */}
+      {/* ── CLIENT LogoS ── */}
       <div className="border-y border-gray-200 bg-gray-50 py-10">
         <div className="w-full px-5 sm:px-8 lg:px-12 xl:px-16 2xl:px-24 3xl:px-40 text-center">
           <p className="text-xs text-gray-400 uppercase tracking-widest mb-8">

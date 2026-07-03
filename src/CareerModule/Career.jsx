@@ -116,23 +116,70 @@ const STATS = [
 ];
 
 const BENEFITS = [
-  { icon: Heart, title: "Health & wellness cover", desc: "Full medical, dental, and mental health support for you and your family." },
-  { icon: GraduationCap, title: "Learning stipend", desc: "An annual budget for courses, conferences, and technical certifications." },
-  { icon: Globe, title: "Global mobility", desc: "Short and long-term placements across our 42-country engineering network." },
-  { icon: Award, title: "Performance bonus", desc: "Compensation tied directly to team and individual delivery, paid twice a year." },
-  { icon: Clock, title: "Flexible hybrid model", desc: "Lab and bench roles on-site, everything else split however your team works best." },
-  { icon: BadgeCheck, title: "Paid certifications", desc: "Cloud, security, and silicon design credentials, fully sponsored." },
+  {
+    icon: Heart,
+    title: "Health & wellness cover",
+    desc: "Full medical, dental, and mental health support for you and your family.",
+  },
+  {
+    icon: GraduationCap,
+    title: "Learning stipend",
+    desc: "An annual budget for courses, conferences, and technical certifications.",
+  },
+  {
+    icon: Globe,
+    title: "Global mobility",
+    desc: "Short and long-term placements across our 42-country engineering network.",
+  },
+  {
+    icon: Award,
+    title: "Performance bonus",
+    desc: "Compensation tied directly to team and individual delivery, paid twice a year.",
+  },
+  {
+    icon: Clock,
+    title: "Flexible hybrid model",
+    desc: "Lab and bench roles on-site, everything else split however your team works best.",
+  },
+  {
+    icon: BadgeCheck,
+    title: "Paid certifications",
+    desc: "Cloud, security, and silicon design credentials, fully sponsored.",
+  },
 ];
 
-const DEPARTMENTS = ["All", "Engineering", "AI & Data", "Cloud", "Security", "Business"];
+const DEPARTMENTS = [
+  "All",
+  "Engineering",
+  "AI & Data",
+  "Cloud",
+  "Security",
+  "Business",
+];
 
 const ROLES = [
-  { title: "Senior Silicon Design Engineer", dept: "Engineering", location: "Bengaluru, IN" },
-  { title: "Machine Learning Engineer", dept: "AI & Data", location: "Hyderabad, IN" },
+  {
+    title: "Senior Silicon Design Engineer",
+    dept: "Engineering",
+    location: "Bengaluru, IN",
+  },
+  {
+    title: "Machine Learning Engineer",
+    dept: "AI & Data",
+    location: "Hyderabad, IN",
+  },
   { title: "Cloud Platform Architect", dept: "Cloud", location: "Remote" },
   { title: "Cybersecurity Analyst", dept: "Security", location: "Pune, IN" },
-  { title: "Embedded Firmware Engineer", dept: "Engineering", location: "Bengaluru, IN" },
-  { title: "Business Strategy Consultant", dept: "Business", location: "Mumbai, IN" },
+  {
+    title: "Embedded Firmware Engineer",
+    dept: "Engineering",
+    location: "Bengaluru, IN",
+  },
+  {
+    title: "Business Strategy Consultant",
+    dept: "Business",
+    location: "Mumbai, IN",
+  },
 ];
 
 const TICKER = [
@@ -145,7 +192,6 @@ const TICKER = [
   "DATA SCIENCE",
   "STRATEGY & OPS",
 ];
-
 
 function useInView(options = { threshold: 0.2 }) {
   const ref = useRef(null);
@@ -259,8 +305,6 @@ const NAV_LINKS = [
   { label: "Open Roles", href: "#roles" },
 ];
 
-
-
 /* ----------------------------------------------------------------
    MAIN COMPONENT
 ---------------------------------------------------------------- */
@@ -277,25 +321,24 @@ export default function Career() {
     }, 4200);
     return () => clearInterval(id);
   }, []);
-useEffect(() => {
-  const onScroll = () => {
-    const max = document.documentElement.scrollHeight - window.innerHeight;
-    setScrollProgress(max > 0 ? (window.scrollY / max) * 100 : 0);
-  };
+  useEffect(() => {
+    const onScroll = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      setScrollProgress(max > 0 ? (window.scrollY / max) * 100 : 0);
+    };
 
-  onScroll();
-  window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
 
-  return () => window.removeEventListener("scroll", onScroll);
-}, []);
-  
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const filteredRoles =
     activeDept === "All" ? ROLES : ROLES.filter((r) => r.dept === activeDept);
 
   return (
     <div className="cp-root">
-    <style>{`
+      <style>{`
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
         :root{
@@ -500,16 +543,16 @@ useEffect(() => {
           padding: 1.3rem 0; transition: padding .3s ease;
         }
         .cp-nav.is-scrolled .cp-nav-inner{ padding: .9rem 0; }
-        .cp-nav-logo{
+        .cp-nav-Logo{
           display:flex; align-items:center; gap:.6rem;
           font-weight:700; font-size:1.05rem; letter-spacing:.02em;
           color:var(--ink); text-decoration:none;
         }
-        .cp-nav-logo-mark{
+        .cp-nav-Logo-mark{
           width:18px; height:18px; border-radius:4px; background:var(--ink);
           position:relative; flex:none;
         }
-        .cp-nav-logo-mark::after{
+        .cp-nav-Logo-mark::after{
           content:""; position:absolute; inset:5px; background:var(--accent); border-radius:2px;
         }
         .cp-nav-links{ display:none; gap:2.2rem; }
@@ -570,66 +613,69 @@ useEffect(() => {
         }
       `}</style>
 
-      <div className="cp-scroll-progress" style={{ width: `${scrollProgress}%` }} />
+      <div
+        className="cp-scroll-progress"
+        style={{ width: `${scrollProgress}%` }}
+      />
 
       {/* ============================ HERO ============================ */}
-    <div className="relative z-10 w-full mx-auto px-4 sm:px-6 xl:px-12 2xl:px-20 pt-24 pb-16 sm:pt-28 sm:pb-24 md:pt-36 md:pb-32">
-  <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 items-center">
+      <div className="relative z-10 w-full mx-auto px-4 sm:px-6 xl:px-12 2xl:px-20 pt-24 pb-16 sm:pt-28 sm:pb-24 md:pt-36 md:pb-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 items-center">
+          {/* LEFT CONTENT */}
+          <div className="min-w-0">
+            <Reveal>
+              <div className="cp-mono inline-flex items-center gap-2 text-xs cp-muted border cp-border-line rounded-full px-4 py-1.5 flex-wrap">
+                <span className="live-dot" />
+                <span>CAREERS · GLOBAL ENGINEERING · 1,248 OPEN ROLES</span>
+              </div>
+            </Reveal>
 
-    {/* LEFT CONTENT */}
-    <div className="min-w-0">
-      <Reveal>
-        <div className="cp-mono inline-flex items-center gap-2 text-xs cp-muted border cp-border-line rounded-full px-4 py-1.5 flex-wrap">
-          <span className="live-dot" />
-          <span>CAREERS · GLOBAL ENGINEERING · 1,248 OPEN ROLES</span>
-        </div>
-      </Reveal>
+            <Reveal delay={0.1}>
+              <h1
+                className="mt-8 font-extrabold leading-[0.95] tracking-[-0.04em] text-gray-900"
+                style={{ fontSize: "clamp(2.5rem, 7vw, 4.5rem)" }}
+              >
+                Software Engineering
+                <br />
+                For Modern
+                <br />
+                <span style={{ color: "var(--accent)" }}>Businesses</span>
+              </h1>
+            </Reveal>
 
-      <Reveal delay={0.1}>
-        <h1 className="mt-8 font-extrabold leading-[0.95] tracking-[-0.04em] text-gray-900" style={{ fontSize: "clamp(2.5rem, 7vw, 4.5rem)" }}>
-          Software Engineering
-          <br />
-          For Modern
-          <br />
-          <span style={{ color: "var(--accent)" }}>
-            Businesses
-          </span>
-        </h1>
-      </Reveal>
+            <Reveal delay={0.2}>
+              <p className="mt-8 max-w-xl text-base sm:text-lg cp-muted leading-relaxed">
+                TechGenius Systems designs the silicon, software and
+                infrastructure that global industry runs on. Join the engineers,
+                researchers and strategists shipping work measured in decades,
+                not sprints.
+              </p>
+            </Reveal>
 
-      <Reveal delay={0.2}>
-        <p className="mt-8 max-w-xl text-base sm:text-lg cp-muted leading-relaxed">
-          TechGenius Systems designs the silicon, software and infrastructure
-          that global industry runs on. Join the engineers, researchers
-          and strategists shipping work measured in decades, not sprints.
-        </p>
-      </Reveal>
+            <Reveal delay={0.3}>
+              <div className="mt-10 flex flex-wrap gap-4">
+                <PrimaryButton>View Open Roles</PrimaryButton>
+                <SecondaryButton>Life At TechGenius</SecondaryButton>
+              </div>
+            </Reveal>
+          </div>
 
-      <Reveal delay={0.3}>
-        <div className="mt-10 flex flex-wrap gap-4">
-          <PrimaryButton>View Open Roles</PrimaryButton>
-          <SecondaryButton>Life At TechGenius</SecondaryButton>
-        </div>
-      </Reveal>
-    </div>
+          {/* RIGHT IMAGE */}
+          <Reveal delay={0.4}>
+            <div className="relative">
+              <div className="absolute -inset-4 bg-red-500/10 blur-3xl rounded-3xl" />
 
-    {/* RIGHT IMAGE */}
-    <Reveal delay={0.4}>
-      <div className="relative">
-        <div className="absolute -inset-4 bg-red-500/10 blur-3xl rounded-3xl" />
-
-        <div className="relative overflow-hidden rounded-3xl border border-gray-200 shadow-2xl bg-white">
-          <img
-            src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1400&auto=format&fit=crop"
-            alt="Software Dashboard"
-            className="w-full h-auto object-cover"
-          />
+              <div className="relative overflow-hidden rounded-3xl border border-gray-200 shadow-2xl bg-white">
+                <img
+                  src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1400&auto=format&fit=crop"
+                  alt="Software Dashboard"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+          </Reveal>
         </div>
       </div>
-    </Reveal>
-
-  </div>
-</div>
 
       {/* ============================ MARQUEE ============================ */}
       <div className="marquee-wrap">
@@ -647,10 +693,15 @@ useEffect(() => {
       <section className="py-16 sm:py-24 lg:py-28">
         <div className="w-full mx-auto px-4 sm:px-6 xl:px-12 2xl:px-20 text-center">
           <Reveal>
-            <p className="cp-mono text-xs cp-accent-text mb-4">02 / DISCIPLINES</p>
+            <p className="cp-mono text-xs cp-accent-text mb-4">
+              02 / DISCIPLINES
+            </p>
           </Reveal>
           <Reveal delay={0.05}>
-            <h2 className="cp-display font-semibold tracking-tight" style={{ fontSize: "clamp(1.9rem, 5vw, 3.75rem)" }}>
+            <h2
+              className="cp-display font-semibold tracking-tight"
+              style={{ fontSize: "clamp(1.9rem, 5vw, 3.75rem)" }}
+            >
               Whatever You Build Best
             </h2>
           </Reveal>
@@ -664,7 +715,10 @@ useEffect(() => {
       </section>
 
       {/* ============================ DOMAINS ============================ */}
-      <section id="domains" className="w-full mx-auto px-4 sm:px-6 xl:px-12 2xl:px-20 pb-16 sm:pb-24 lg:pb-28">
+      <section
+        id="domains"
+        className="w-full mx-auto px-4 sm:px-6 xl:px-12 2xl:px-20 pb-16 sm:pb-24 lg:pb-28"
+      >
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-7">
           {DOMAINS.map((item, index) => {
             const Icon = item.icon;
@@ -687,16 +741,27 @@ useEffect(() => {
 
                   <div className="p-6 sm:p-7 flex flex-col flex-1">
                     <div className="flex items-center justify-between">
-                      <span className="cp-mono cp-text-11 cp-muted">{item.code}</span>
-                      <Icon size={18} strokeWidth={1.8} style={{ color: "var(--accent)" }} />
+                      <span className="cp-mono cp-text-11 cp-muted">
+                        {item.code}
+                      </span>
+                      <Icon
+                        size={18}
+                        strokeWidth={1.8}
+                        style={{ color: "var(--accent)" }}
+                      />
                     </div>
 
-                    <h3 className="cp-display mt-4 text-lg sm:text-xl font-semibold">{item.title}</h3>
+                    <h3 className="cp-display mt-4 text-lg sm:text-xl font-semibold">
+                      {item.title}
+                    </h3>
                     <p className="mt-3 cp-muted text-sm leading-relaxed flex-1">
                       {item.desc}
                     </p>
 
-                    <button className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold" style={{ color: "var(--accent)" }}>
+                    <button
+                      className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold"
+                      style={{ color: "var(--accent)" }}
+                    >
                       Explore roles
                       <ArrowRight size={14} />
                     </button>
@@ -725,18 +790,23 @@ useEffect(() => {
 
           <div className="min-w-0">
             <Reveal>
-              <p className="cp-mono text-xs cp-accent-text mb-4">03 / EARLY CAREER</p>
+              <p className="cp-mono text-xs cp-accent-text mb-4">
+                03 / EARLY CAREER
+              </p>
             </Reveal>
             <Reveal delay={0.05}>
-              <h2 className="cp-display font-semibold tracking-tight" style={{ fontSize: "clamp(1.9rem, 4.5vw, 3rem)" }}>
+              <h2
+                className="cp-display font-semibold tracking-tight"
+                style={{ fontSize: "clamp(1.9rem, 4.5vw, 3rem)" }}
+              >
                 Students & Fresh Graduates
               </h2>
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-6 cp-muted leading-relaxed text-base sm:text-lg">
-                Rotational engineering programs, paid internships and a
-                two-year mentorship track designed to get you shipping real
-                hardware and code in your first quarter, not your third year.
+                Rotational engineering programs, paid internships and a two-year
+                mentorship track designed to get you shipping real hardware and
+                code in your first quarter, not your third year.
               </p>
             </Reveal>
             <Reveal delay={0.15}>
@@ -749,15 +819,25 @@ useEffect(() => {
       </section>
 
       {/* ============================ LIFE / DEMO GALLERY ============================ */}
-      <section id="life" style={{ background: "var(--dark-bg)" }} className="py-16 sm:py-24 lg:py-28">
+      <section
+        id="life"
+        style={{ background: "var(--dark-bg)" }}
+        className="py-16 sm:py-24 lg:py-28"
+      >
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <Reveal>
-            <p className="cp-mono text-xs text-center mb-4" style={{ color: "var(--accent)" }}>
+            <p
+              className="cp-mono text-xs text-center mb-4"
+              style={{ color: "var(--accent)" }}
+            >
               04 / INSIDE THE BUILD
             </p>
           </Reveal>
           <Reveal delay={0.05}>
-            <h2 className="cp-display text-white text-center font-semibold tracking-tight" style={{ fontSize: "clamp(1.9rem, 4.5vw, 3rem)" }}>
+            <h2
+              className="cp-display text-white text-center font-semibold tracking-tight"
+              style={{ fontSize: "clamp(1.9rem, 4.5vw, 3rem)" }}
+            >
               Life At TechGenius
             </h2>
           </Reveal>
@@ -780,7 +860,9 @@ useEffect(() => {
                   />
                 ))}
                 <div className="demo-caption cp-mono">
-                  {String(activeImg + 1).padStart(2, "0")} / {String(GALLERY.length).padStart(2, "0")} — {GALLERY[activeImg].caption}
+                  {String(activeImg + 1).padStart(2, "0")} /{" "}
+                  {String(GALLERY.length).padStart(2, "0")} —{" "}
+                  {GALLERY[activeImg].caption}
                 </div>
               </div>
 
@@ -805,13 +887,18 @@ useEffect(() => {
           {STATS.map((item, i) => (
             <Reveal key={i} delay={i * 0.08}>
               <div className="stat-card">
-                <div className="cp-display stat-num" style={{ color: "var(--accent)" }}>
+                <div
+                  className="cp-display stat-num"
+                  style={{ color: "var(--accent)" }}
+                >
                   <Counter value={item.value} inView={statsInView} />
                   {item.suffix}
                 </div>
                 <p className="mt-3 cp-muted text-sm">{item.label}</p>
                 <div className="stat-bar">
-                  <div className={`stat-bar-fill ${statsInView ? "is-in-view" : ""}`} />
+                  <div
+                    className={`stat-bar-fill ${statsInView ? "is-in-view" : ""}`}
+                  />
                 </div>
               </div>
             </Reveal>
@@ -825,10 +912,18 @@ useEffect(() => {
       <section id="benefits" className="py-16 sm:py-24 lg:py-28">
         <div className="w-full mx-auto px-4 sm:px-6 xl:px-12 2xl:px-20">
           <Reveal>
-            <p className="cp-mono text-xs text-center mb-4" style={{ color: "var(--accent)" }}>05 / WHY HERE</p>
+            <p
+              className="cp-mono text-xs text-center mb-4"
+              style={{ color: "var(--accent)" }}
+            >
+              05 / WHY HERE
+            </p>
           </Reveal>
           <Reveal delay={0.05}>
-            <h2 className="cp-display text-center font-semibold tracking-tight mb-12 sm:mb-16" style={{ fontSize: "clamp(1.9rem, 4.5vw, 3rem)" }}>
+            <h2
+              className="cp-display text-center font-semibold tracking-tight mb-12 sm:mb-16"
+              style={{ fontSize: "clamp(1.9rem, 4.5vw, 3rem)" }}
+            >
               You Belong Here
             </h2>
           </Reveal>
@@ -839,9 +934,17 @@ useEffect(() => {
               return (
                 <Reveal key={index} delay={(index % 3) * 0.08}>
                   <div className="benefit-card p-6 sm:p-8 rounded-2xl h-full transition-colors">
-                    <Icon size={22} strokeWidth={1.8} style={{ color: "var(--accent)" }} />
-                    <h3 className="cp-display mt-5 text-lg font-semibold">{item.title}</h3>
-                    <p className="mt-2.5 text-sm cp-muted leading-relaxed">{item.desc}</p>
+                    <Icon
+                      size={22}
+                      strokeWidth={1.8}
+                      style={{ color: "var(--accent)" }}
+                    />
+                    <h3 className="cp-display mt-5 text-lg font-semibold">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2.5 text-sm cp-muted leading-relaxed">
+                      {item.desc}
+                    </p>
                   </div>
                 </Reveal>
               );
@@ -850,20 +953,28 @@ useEffect(() => {
         </div>
       </section>
 
-      
-
       {/* ============================ CTA ============================ */}
-      <section style={{ background: "var(--dark-bg)" }} className="relative py-20 sm:py-28 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 cp-grid-bg" style={{ opacity: 0.25 }} />
+      <section
+        style={{ background: "var(--dark-bg)" }}
+        className="relative py-20 sm:py-28 lg:py-32 overflow-hidden"
+      >
+        <div
+          className="absolute inset-0 cp-grid-bg"
+          style={{ opacity: 0.25 }}
+        />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <Reveal>
-            <h2 className="cp-display text-white font-semibold tracking-tight" style={{ fontSize: "clamp(2rem, 5.5vw, 3.75rem)" }}>
+            <h2
+              className="cp-display text-white font-semibold tracking-tight"
+              style={{ fontSize: "clamp(2rem, 5.5vw, 3.75rem)" }}
+            >
               Your Next Build Starts Here
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-6 text-white/60 text-base sm:text-lg">
-              Join TechGenius Systems and ship work that outlasts the trend cycle.
+              Join TechGenius Systems and ship work that outlasts the trend
+              cycle.
             </p>
           </Reveal>
           <Reveal delay={0.2}>
@@ -873,7 +984,6 @@ useEffect(() => {
           </Reveal>
         </div>
       </section>
-
     </div>
   );
 }
